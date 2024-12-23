@@ -1,0 +1,221 @@
+:root{
+	--bg2: #11111b;
+	--bg: #1e1e2e;
+  --bg3:#181825;
+	--fg: #cdd6f4;
+	--fg2: #585b70;
+  --fg3:#45475a;
+  --subtext:#a6adc8;
+  --primary:#89b4fa;
+  --secondary: #a6e3a1;
+}
+
+*{
+  color: var(--fg);
+  margin: 0;
+  padding: 0;
+  font-family: "Indie Flower",serif;
+  font-weight: bold;
+}
+body{
+	background-color: var(--bg);
+  width: 100%;
+  max-width: 100vw;
+}
+
+
+/* Navbar  */
+header{
+	display: flex;
+	flex-direction: flex-direction;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--bg2);
+	height: 16svh;
+	width: 100%;
+	position: absolute;
+	top:0;
+	left:0;
+	box-shadow: 0 0 40px 10px var(--bg2);
+  z-index: 1000;
+}
+
+header a{
+  padding: 2rem;
+	text-decoration: none;
+  transition: all 1s ease;
+  font-size: 1.5rem;
+}
+header a:hover{
+	color: var(--fg2);
+
+}
+#leftNav{
+	float:left;
+}
+#rightNav{
+	float:right;
+}
+#logo{
+  width: 28rem;
+  height: full;
+}
+#themeBtn{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  margin-left: 2rem;
+  margin-right:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#themeIcon{
+  fill: var(--fg);
+  transition: all 0.4s ease;
+}
+
+#themeIcon:hover{
+  fill: var(--fg2);
+}
+
+
+/* Main Content */
+#mainContent{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  height: 100vh;
+}
+
+#countDiv{
+  width: 40vw;
+  height: 12rem;
+  margin-top: 2.5rem;
+  background-color: var(--bg2);
+  border: 2px solid var(--fg3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+}
+.timeContainer{
+  font-size: 5rem;
+  color: var(--fg);
+  text-align: center;
+  background-color: var(--bg);
+  padding: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin: 1rem;
+  border-radius:20px;
+  border: 2px solid var(--fg3);
+  width: 4rem;
+
+}
+#randomJoke{
+  margin-top: 1.5rem;
+  color: var(--subtext);
+  font-size: 2rem;
+}
+/* Santa Animation */
+#movingSanta{
+  position: fixed;
+  right: 100%;
+  top: 50%;
+  bottom:0;
+  transition: all 2s;
+}
+
+
+/* Other Buttons */
+#jingleBtn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 2rem;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 2.5rem;
+  background-color: var(--bg2);
+  border: 2px solid var(--fg3);
+	box-shadow: 0 0 40px 10px var(--bg2);
+  transition: 0.5s;
+}
+
+#jingleBtn:hover{
+  scale: 1.2;
+}
+
+
+/* Snow animation */
+@keyframes snow{
+  0%{
+    opacity:0;
+  }
+  75%{
+    opacity:1;
+  }
+  100%{
+    top:120svh;
+    opacity:1;
+  }
+}
+@keyframes moveSnow{
+  0%{
+    margin-left: 0;
+  }
+  25%{
+    margin-left: 50px;
+  }
+  50%{
+    margin-left: -50px;
+  }
+  75%{
+    margin-left:50px;
+  }
+  100%{
+    margin-left: 0;
+  }
+}
+
+#flakeContainer{
+  height:100vh;
+  overflow: hidden;
+  position:absolute;
+  width: 100%;
+  top:0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+}
+.snow{
+  animation: snow ease-in infinite, moveSnow ease-in-out infinite;
+  color: #7f849c;
+  position: absolute;
+}
+
+/* Other  */
+.inpt{
+  background-color: var(--bg);
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-radius: 20px;
+  border: 2px solid var(--fg3);
+  margin: 1rem;
+}
+.inpt:focus{
+  border: none;
+  outline: 3px solid var(--primary);
+}
+
