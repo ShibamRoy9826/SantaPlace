@@ -6,12 +6,18 @@ A simple static website to display a christmas countdown and many more activites
 ## ✨ Demo 
 [Live Here](https://shibamroy9826.github.io/SantaPlace/)
 
+## Screenshots📷
+![First](screenshots/s1.png)
+![Second](screenshots/s2.png)
+![Third](screenshots/s3.png)
+![Fourth](screenshots/s4.png)
+
 ## Features 😎
 - Theme customizability
 - Responsive
 - Send a letter to santa (Don't ask me how I know his information)
 - Christmas countdown
-- Elv's message...
+- Elf's message...
 
 ## How is it made?
 
