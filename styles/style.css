@@ -357,3 +357,11 @@ header a:hover{
 #hamIcon:hover{
   fill: var(--fg2);
 }
+.link{
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+.link:hover{
+  color: var(--secondary);
+}
+
