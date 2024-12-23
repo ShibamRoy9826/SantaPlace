@@ -25,13 +25,13 @@ const month=today.getMonth()+1;
 
 if (date==25 && month==12){
   let showed=localStorage.getItem('wished')||false;
-  if (showed){
+  let something=document.getElementById('first');
+  let randT=document.getElementById('randomJoke');
+  something.innerHTML="Merry Christmas! Sing carrols and celebrate! Jingle Jingle!"
+  randT.innerHTML="The wait is over! santa is here!"
+  if (!showed){
     showWish();
     localStorage.setItem('wished', true);
-    let something=document.getElementById('first');
-    let randT=document.getElementById('randomJoke');
-    something.innerHTML="Merry Christmas! Sing carrols and celebrate! Jingle Jingle!"
-    randT.innerHTML="The wait is over! santa is here!"
   }
 }else{
   let hrPrev=hr.innerHTML;
