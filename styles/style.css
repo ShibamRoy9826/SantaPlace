@@ -119,7 +119,6 @@ header a{
 }
 header a:hover{
 	color: var(--fg2);
-
 }
 #leftNav{
 	float:left;
@@ -178,7 +177,7 @@ header a:hover{
   justify-content: center;
   align-items: center;
   padding: 1rem;
-
+  z-index: 3;
 }
 .timeContainer{
   font-size: 5rem;
@@ -192,6 +191,7 @@ header a:hover{
   border-radius:20px;
   border: 2px solid var(--fg3);
   width: 4rem;
+  z-index: 3;
 }
 #randomJoke{
   margin-top: 1.5rem;
@@ -205,6 +205,33 @@ header a:hover{
   top: 50%;
   bottom:0;
   transition: all 2s;
+  z-index: 10;
+}
+
+/* Trees */
+#tree{
+  position: absolute;
+  left: 4rem;
+  top: 50vh;
+  width: 8vw;
+  height:20vh;
+}
+
+#tree2{
+  position: absolute;
+  right: 4rem;
+  top: 50vh;
+  width: 8vw;
+  height:20vh;
+}
+
+/* Moving Ginger bread */
+#movingGinger{
+  position: absolute;
+  top: 50vh;
+  left:50vw;
+  transition: all 2s;
+  width:10rem;
 }
 
 
@@ -300,6 +327,7 @@ header a:hover{
   border: 2px solid var(--fg3);
   border-radius:20px;
   padding: 2rem;
+  z-index: 10;
   transition: all 1s ease;
 }
 #themes{

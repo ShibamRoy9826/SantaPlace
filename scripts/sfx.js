@@ -1,4 +1,4 @@
-
+let ginger=document.getElementById('movingGinger');
 let isPlaying=false;
 let aud=new Audio("audio/jingle_bells.mp3");
 let santaAud=new Audio("audio/santaLaugh.mp3");
@@ -16,6 +16,7 @@ function fly(element) {
         }
       );
     }
+
 
 function flySmall(element) {
       flyAnim=element.animate(
@@ -41,7 +42,6 @@ function moveSanta(){
         }else{
         flySmall(santa);
         const laugh=setTimeout(santaAud.play(),1000);
-
         }
       }
       santaReq=false;
@@ -49,13 +49,26 @@ function moveSanta(){
     santaReq=true;
   }
 }
+function moveGinger(){
+  console.log("ran");
+  ginger.style.transform="translateY(-10rem)";
+  let getBack=setTimeout(()=>{
+    ginger.style.transform="translateY(0)";
+  },15000)
+  console.log("done...");
+
+}
 function Jingle(){
   if(!isPlaying){
     aud.play();
     isPlaying=true;
+    if(ginger){
+      moveGinger();
+    }
     moveSanta();
   }else{
     aud.pause();
     isPlaying=false;
   }
 }
+

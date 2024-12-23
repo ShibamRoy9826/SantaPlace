@@ -16,6 +16,7 @@ const randFlake = () => {
   font-size: ${size}px;
   opacity: ${opacity};
   animation-duration: ${dur}s;
+  z-index:4;
   `
 }
 

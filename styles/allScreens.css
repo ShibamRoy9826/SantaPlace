@@ -59,6 +59,12 @@
     left:1rem;
     top:50%;
   }
+  #tree{
+    display:none;
+  }
+  #tree2{
+    display:none;
+  }
 
 
 }
