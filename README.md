@@ -1,4 +1,4 @@
-<img src="images/logo.png">
+<img src="images/logo.png" width="40%">
 
 # SantaPlace🎅
 A simple static website to display a christmas countdown and many more activites that elves probably like:)
