@@ -197,11 +197,23 @@ label{
 
   </div>
 </form>
+<div id="themeDiv">
+<label for="themes" id="themeLabel">Themes: </label>
+<select id="themes" name="themes">
+<option value="catppuccin" selected>Catppuccin</option>
+<option value="nord">Nord</option>
+<option value="gruvbox">Gruvbox</option>
+<option value="rosepine">Rosé-pine</option>
+<option value="solarized-dark">Solarized-dark</option>
+<option value="solarized-light">Solarized-light</option>
+</select>
+</div>
 
 
 
 <script type="text/javascript" src="scripts/sfx.js"></script>
 <script type="text/javascript" src="scripts/snow.js"></script>
+<script type="text/javascript" src="scripts/theme.js"></script>
 <script>
 
 function showNormalMessage(){
@@ -210,7 +222,7 @@ function showNormalMessage(){
     let s=document.getElementById("confirmSubtext");
     let Submitbtn=document.getElementById("submit");
     h.innerHTML="Are you sure you want to submit it?";
-  s.innerHTML="Santa will lookover to your request, hope he fulfills it:) <br> Warning by the Elves: Do not proceed by lying!";
+                 s.innerHTML="Santa will lookover to your request, hope he fulfills it:) <br> Warning by the Elves: Do not proceed by lying!";
     e.style.display="block";
     Submitbtn.style.display ="block";
 
@@ -247,6 +259,13 @@ function submitTheForm(){
   let form=document.getElementById("santaForm");
   form.submit();
 }
+
+function escapeBtn(event){
+  if (event.key=="Escape" || event.keyCode==27){
+    hideMessage();
+  }
+}
+document.addEventListener("keydown",escapeBtn)
 
 </script>
 
