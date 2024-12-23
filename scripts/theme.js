@@ -10,12 +10,23 @@ function changeTheme(themeName){
   localStorage.setItem('theme', themeName);
 }
 function dropDown(toopen=true){
-  if (toopen){
-    themeDiv.style.top="12rem";
-    themeDiv.style.left=10;
+  if (window.screen.width>=768){
+    if (toopen){
+      themeDiv.style.top="12rem";
+      themeDiv.style.left=0;
+    }else{
+      themeDiv.style.top="-50%";
+      themeDiv.style.left=0;
+    }
   }else{
-    themeDiv.style.top="-50%";
-    themeDiv.style.left=10;
+    if (toopen){
+      themeDiv.style.top="14rem";
+      themeDiv.style.left=0;
+    }else{
+      themeDiv.style.top="-50%";
+      themeDiv.style.left=0;
+    }
+
   }
 }
 

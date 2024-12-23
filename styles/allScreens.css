@@ -1,0 +1,57 @@
+/* General stuff for phones*/
+@media(max-width:768px){
+  #logo{
+    width:15rem;
+    height: full;
+  }
+  #leftNav{
+    display:none;
+  }
+  #rightNav{
+    display:none;
+  }
+  #themeBtn{
+    margin-left:0.5rem;
+    height:70%;
+  }
+  #mainContent h1{
+    font-size:1.5rem;
+    text-wrap: wrap;
+    text-align: center;
+    max-width:80vw;
+  }
+  .timeContainer{
+    width:auto;
+    height:auto;
+    padding:1.7rem;
+    font-size:2rem;
+  }
+  #countDiv{
+    width:85vw;
+  }
+  #randomJoke{
+    font-size:1.5rem;
+    text-align:center;
+    max-width:80vw;
+  }
+  #jingleBtn{
+    margin:1rem;
+    padding:2rem;
+  }
+  .timeContainer span{
+    font-size: 2rem;
+  }
+  #hamburgerDiv{
+    display:flex;
+    flex-direction: column;
+    justify-self: space-evenly;
+    align-items: center;
+  }
+  #hamBtn{
+    display:flex;
+    margin-right:0.5rem;
+    height:70%;
+  }
+
+
+}

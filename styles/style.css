@@ -87,6 +87,7 @@
   font-weight: bold;
   transition: all 0.5s ease;
 }
+
 body{
 	background-color: var(--bg);
   width: 100%;
@@ -162,6 +163,7 @@ header a:hover{
   justify-content: center;
   width:100%;
   height: 100vh;
+  margin-top:2rem;
 }
 
 #countDiv{
@@ -190,7 +192,6 @@ header a:hover{
   border-radius:20px;
   border: 2px solid var(--fg3);
   width: 4rem;
-
 }
 #randomJoke{
   margin-top: 1.5rem;
@@ -222,12 +223,15 @@ header a:hover{
   border: 2px solid var(--fg3);
 	box-shadow: 0 0 40px 10px var(--bg2);
   transition: 0.5s;
+  cursor: pointer;
 }
 
 #jingleBtn:hover{
   scale: 1.2;
 }
-
+#jingleBtn:hover .st0{
+  fill: var(--primary);
+}
 
 /* Snow animation */
 @keyframes snow{
@@ -313,3 +317,43 @@ header a:hover{
   font-size: 2rem;
 }
 
+#hamburgerDiv{
+  display: none;
+  position:absolute;
+  top:-75vh;
+  left:0;
+  width:100vw;
+  height:auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: var(--bg2);
+  border-radius:20px;
+  border: 2px solid var(--fg2);
+  transition: all 1s ease;
+}
+#hamOption{
+  font-size: 2rem;
+}
+#hamBtn{
+  position: absolute;
+  right:0;
+  top: 0;
+  height: 100%;
+  margin-left: 2rem;
+  margin-right:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  display:none;
+  transform: rotate(90deg);
+}
+#hamIcon{
+  fill: var(--fg);
+  transition: all 0.4s ease;
+}
+
+#hamIcon:hover{
+  fill: var(--fg2);
+}
