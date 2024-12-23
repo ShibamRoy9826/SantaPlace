@@ -41,7 +41,7 @@
 </header>
 
 <div id="mainContent">
-  <h1> Can't wait for santa? Nor can I , let's count together...</h1>
+  <h1 id="first"> Can't wait for santa? Nor can I , let's count together...</h1>
 
   <div id="countDiv">
     <h1 class="timeContainer" ><span id="hours">00</span></h1>:
@@ -51,6 +51,18 @@
 
   <p id="randomJoke">Every second you wait, Santa's sleigh gets shinier. Patience is magical !</p>
   <div id="flakeContainer"></div>
+
+<div id="overlay">
+    <div id="message">
+    <h1 id="confirmHeading">Merry Christmas!</h1>
+        <p id="confirmSubtext">Hope you received the gifts that the elves made and santa brought! If you didn't, better luck next time! but hey don't be sad! enjoy this moment! </p>
+        <div id="btnContainer">
+        <button class="btn" id="dontSubmit" style="margin:0.5rem;" onclick="hideMessage();Jingle();">Okay! Start the Music!</button>
+        </div>
+
+    </div>
+
+</div>
 
 </div>
 
@@ -73,6 +85,25 @@
 </div>
 
 
+<script>
+function showWish(){
+    let e=document.getElementById("overlay");
+    e.style.display="block";
+}
+function hideMessage(){
+    let e=document.getElementById("overlay");
+    e.style.display="none";
+}
+
+function escapeBtn(event){
+  if (event.key=="Escape" || event.keyCode==27){
+    hideMessage();
+  }
+}
+document.addEventListener("keydown",escapeBtn)
+
+
+</script>
 <script type="text/javascript" src="scripts/countdown.js"></script>
 <script type="text/javascript" src="scripts/sfx.js"></script>
 <script type="text/javascript" src="scripts/snow.js"></script>

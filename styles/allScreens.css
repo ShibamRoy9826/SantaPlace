@@ -52,6 +52,13 @@
     margin-right:0.5rem;
     height:70%;
   }
+  #message{
+    width:85vw;
+    height:auto;
+    margin:0;
+    left:1rem;
+    top:50%;
+  }
 
 
 }
